@@ -4,4 +4,5 @@
     <string name="get_all_names_from_sqlite">Get All Names From SQLite</string>
     <string name="store">Store</string>
     <string name="input_name">Input Name</string>
+    <string name="delete_all_names_from_sqlite">Delete All Names From SQLite</string>
 </resources>

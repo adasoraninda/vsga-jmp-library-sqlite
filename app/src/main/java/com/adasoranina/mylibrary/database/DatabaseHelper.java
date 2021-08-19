@@ -49,7 +49,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(KEY_FIRST_NAME, student);
 
-        return db.insert(TABLE_STUDENTS, null, values);
+        long result = db.insert(TABLE_STUDENTS, null, values);
+
+        db.close();
+        return result;
     }
 
     public List<String> getAllStudents() {
@@ -70,7 +73,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         c.close();
+        db.close();
         return students;
+    }
+
+    public int deleteAllStudents(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_STUDENTS, null, null);
+
+        db.close();
+        return result;
     }
 
 }

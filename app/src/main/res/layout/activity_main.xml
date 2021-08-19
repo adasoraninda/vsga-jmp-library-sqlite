@@ -43,6 +43,13 @@
         android:text="@string/get_all_names_from_sqlite"
         app:layout_constraintTop_toBottomOf="@id/button_store" />
 
+    <Button
+        android:id="@+id/button_del_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_all_names_from_sqlite"
+        app:layout_constraintTop_toBottomOf="@id/button_get_names" />
+
     <TextView
         android:id="@+id/text_result_names"
         android:layout_width="match_parent"
@@ -50,7 +57,7 @@
         android:layout_marginTop="8dp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_get_names"
+        app:layout_constraintTop_toBottomOf="@id/button_del_names"
         tools:text="@tools:sample/lorem/random" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
